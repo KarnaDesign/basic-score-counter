@@ -7,6 +7,24 @@ function Header(props) {
     );
 }
 
+function PlayerRow() {
+    return (
+        <div className="row">
+            <div className="left col">
+                <input type="text" placeholder="Player name"/>
+            </div>
+            <div className="right col">
+                <div className="counter">
+                    <button className="plus">+</button>
+                    <input type="number"/>
+                    <button className="minus">-</button>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+
 function Application(props) {
     return (
         <div id="app">
@@ -20,19 +38,8 @@ function Application(props) {
                         <h4>Score</h4>
                     </div>
                 </div>
-
-                <div className="row">
-                    <div className="left col">
-                        <input type="text" placeholder="Player name"/>
-                    </div>
-                    <div className="right col">
-                        <div className="counter">
-                            <button className="plus">+</button>
-                            <input type="number"/>
-                            <button className="minus">-</button>
-                        </div>
-                    </div>
-                </div>
+                <PlayerRow />
+                <PlayerRow />
             </div>
         </div>
     );

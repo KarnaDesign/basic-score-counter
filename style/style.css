@@ -38,6 +38,7 @@
   font-size: 3em;
 }
 #wrapper .row {
+  margin-top: 0.2em;
   zoom: 1;
 }
 #wrapper .row:before,

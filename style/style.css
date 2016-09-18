@@ -1,4 +1,17 @@
 @import 'https://fonts.googleapis.com/css?family=Yatra+One';
+/* Mixins */
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/* End mixins */
 * {
   margin: 0;
   padding: 0;
@@ -15,10 +28,62 @@
 }
 #wrapper header {
   text-align: center;
+  margin-bottom: 3em;
 }
 #wrapper header h1 {
   text-transform: uppercase;
   border-bottom: 1px solid #000;
   padding-bottom: 0.3em;
   margin-bottom: 0.3em;
+  font-size: 3em;
+}
+#wrapper .row {
+  zoom: 1;
+}
+#wrapper .row:before,
+#wrapper .row:after {
+  content: "";
+  display: table;
+}
+#wrapper .row:after {
+  clear: both;
+}
+#wrapper .row .col {
+  width: 50%;
+  float: left;
+}
+#wrapper .row .col h4 {
+  text-align: center;
+  font-size: 2em;
+}
+#wrapper .row .col.left input {
+  width: 90%;
+  font-size: 3em;
+  padding: 3%;
+}
+#wrapper .row .col.right .counter {
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+}
+#wrapper .row .col.right .counter button,
+#wrapper .row .col.right .counter input {
+  font-size: 3em;
+  padding: 3% 0;
+}
+#wrapper .row .col.right .counter input {
+  width: 46%;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+#wrapper .row .col.right .counter button {
+  width: 23%;
+}
+#wrapper .row .col.right .counter button.plus {
+  border-top-left-radius: 0.25em;
+  border-bottom-left-radius: 0.25em;
+}
+#wrapper .row .col.right .counter button.minus {
+  border-top-right-radius: 0.25em;
+  border-bottom-right-radius: 0.25em;
 }

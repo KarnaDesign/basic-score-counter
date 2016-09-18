@@ -1,10 +1,16 @@
+function Header(props) {
+    return(
+        <header>
+            <h1>{props.title}</h1>
+            <p>{props.tagLine}</p>
+        </header>
+    );
+}
+
 function Application(props) {
     return(
         <div id="app">
-            <header>
-                <h1>{props.title}</h1>
-                <p>{props.tagLine}</p>
-            </header>
+            <Header title={props.title} tagLine={props.tagLine}/>
         </div>
     );
 }

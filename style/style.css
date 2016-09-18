@@ -17,7 +17,7 @@
   text-align: center;
 }
 #wrapper header h1 {
-  text-transform: capitalize;
+  text-transform: uppercase;
   border-bottom: 1px solid #000;
   padding-bottom: 0.3em;
   margin-bottom: 0.3em;

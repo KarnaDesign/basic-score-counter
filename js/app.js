@@ -40,6 +40,10 @@ function Application(props) {
                 </div>
                 <PlayerRow />
                 <PlayerRow />
+
+                <div className="row">
+                    <button id="addPlayer">Add player</button>
+                </div>
             </div>
         </div>
     );

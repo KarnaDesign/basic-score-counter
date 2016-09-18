@@ -38,7 +38,7 @@
   font-size: 3em;
 }
 #wrapper .row {
-  margin-top: 0.2em;
+  margin-top: 0.5em;
   zoom: 1;
 }
 #wrapper .row:before,
@@ -49,28 +49,36 @@
 #wrapper .row:after {
   clear: both;
 }
+#wrapper .row button,
+#wrapper .row input {
+  font-size: 3em;
+  border: none;
+}
 #wrapper .row .col {
-  width: 50%;
   float: left;
 }
 #wrapper .row .col h4 {
   text-align: center;
   font-size: 2em;
 }
+#wrapper .row .col.left {
+  width: 70%;
+}
 #wrapper .row .col.left input {
   width: 90%;
-  font-size: 3em;
-  padding: 3%;
+  padding: 0.3em 3%;
+}
+#wrapper .row .col.right {
+  width: 30%;
 }
 #wrapper .row .col.right .counter {
-  width: 75%;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
 #wrapper .row .col.right .counter button,
 #wrapper .row .col.right .counter input {
-  font-size: 3em;
-  padding: 3% 0;
+  padding: 0.3em 0;
 }
 #wrapper .row .col.right .counter input {
   width: 46%;
@@ -78,7 +86,7 @@
   margin-left: 2%;
 }
 #wrapper .row .col.right .counter button {
-  width: 23%;
+  width: 25%;
 }
 #wrapper .row .col.right .counter button.plus {
   border-top-left-radius: 0.25em;
@@ -87,4 +95,13 @@
 #wrapper .row .col.right .counter button.minus {
   border-top-right-radius: 0.25em;
   border-bottom-right-radius: 0.25em;
+}
+#wrapper .row #addPlayer {
+  font-size: 3em;
+  padding: 2% 5%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 0.5em;
 }

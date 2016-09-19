@@ -1,3 +1,11 @@
+var players = [{
+    name: "Player1",
+    score: 0
+}, {
+    name: "Player2",
+    score: 0
+}];
+
 function Header(props) {
     return (
         <header>
@@ -7,22 +15,32 @@ function Header(props) {
     );
 }
 
-function PlayerRow() {
+Header.propTypes = {
+    title: React.PropTypes.string.isRequired,
+    tagLine: React.PropTypes.string.isRequired,
+};
+
+function PlayerRow(props) {
     return (
         <div className="row">
             <div className="left col">
-                <input type="text" placeholder="Player name"/>
+                <input type="text" value={props.name} placeholder="Player name"/>
             </div>
             <div className="right col">
                 <div className="counter">
                     <button className="plus">+</button>
-                    <input type="number"/>
+                    <input type="number" value={props.score}/>
                     <button className="minus">-</button>
                 </div>
             </div>
         </div>
     );
 }
+
+PlayerRow.propTypes = {
+    name: React.PropTypes.string.isRequired,
+    score: React.PropTypes.number.isRequired,
+};
 
 
 function Application(props) {
@@ -38,8 +56,10 @@ function Application(props) {
                         <h4>Score</h4>
                     </div>
                 </div>
-                <PlayerRow />
-                <PlayerRow />
+                {props.players.map(function (player) {
+                    return <PlayerRow name={player.name} score={player.score}/>
+                })}
+
 
                 <div className="row">
                     <button id="addPlayer">Add player</button>
@@ -49,7 +69,15 @@ function Application(props) {
     );
 }
 
+Application.propTypes = {
+    players: React.PropTypes.arrayOf(React.PropTypes.shape({
+        name: React.PropTypes.string.isRequired,
+        score: React.PropTypes.number.isRequired,
+    })).isRequired,
+};
+
 ReactDOM.render(
     <Application title="Basic Score Counter"
-                 tagLine="Keeping track!"/>
+                 tagLine="Keeping track!"
+                 players={players}/>
     , document.getElementById("wrapper"));

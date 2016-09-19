@@ -57,7 +57,7 @@ function Application(props) {
                     </div>
                 </div>
                 {props.players.map(function (player) {
-                    return <PlayerRow name={player.name} score={player.score}/>
+                    return <PlayerRow key={player.name} name={player.name} score={player.score}/>
                 })}
 
 

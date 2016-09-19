@@ -84,6 +84,7 @@
   width: 46%;
   margin-right: 2%;
   margin-left: 2%;
+  text-align: center;
 }
 #wrapper .row .col.right .counter button {
   width: 25%;
